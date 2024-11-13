@@ -6,8 +6,7 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Snippets](#snippets)
-6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
+6. 🚀 [More](#more)
 
 ## <a name="introduction">🤖 Introduction</a>
 
@@ -53,13 +52,6 @@ Make sure you have the following installed on your machine:
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/en)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
-
-```bash
-git clone https://github.com/adrianhajdin/pricewise.git
-cd pricewise
-```
 
 **Installation**
 
@@ -767,9 +759,5 @@ export const formatNumber = (num: number = 0) => {
 ```
 
 </details>
-
-## <a name="links">🔗 Links</a>
-
-Assets used in the project are [here](https://drive.google.com/file/d/1v6h993BgYX6axBoIXFbZ9HQAgqbR4PSH/view?usp=sharing)
 
 
