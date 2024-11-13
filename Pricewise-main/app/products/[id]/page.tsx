@@ -13,8 +13,8 @@ type Props = {
 }
 
 const ProductDetails = async ({ params: { id } }: Props) => {
+  console.log(id);
   const product: Product = await getProductById(id);
-
   if(!product) redirect('/')
 
   const similarProducts = await getSimilarProducts(id);
@@ -120,7 +120,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
               </div>
 
               <p className="text-sm text-black opacity-50">
-                <span className="text-primary-green font-semibold">93% </span> of
+                <span className="text-primary-green font-semibold">90% </span> of
                 buyers have recommeded this.
               </p>
             </div>

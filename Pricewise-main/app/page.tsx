@@ -23,8 +23,8 @@ const Home = async () => {
             </p>
 
             <h1 className="head-text">
-              Unleash the Power of
-              <span className="text-primary"> PriceWise</span>
+              Your Trusted Guide to uncovering
+              <span className="text-primary"> Unbeatable deals!</span>
             </h1>
 
             <p className="mt-6">

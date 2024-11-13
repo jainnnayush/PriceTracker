@@ -25,17 +25,20 @@ export async function scrapeAmazonProduct(url: string) {
 
   try {
     // Fetch the product page
+    console.log("response")
     const response = await axios.get(url, options);
+    //console.log(response.data);
     const $ = cheerio.load(response.data);
 
     // Extract the product title
     const title = $('#productTitle').text().trim();
+    console.log(title);
     const currentPrice = extractPrice(
       $('.priceToPay span.a-price-whole'),
       $('.a.size.base.a-color-price'),
       $('.a-button-selected .a-color-base'),
     );
-
+    console.log(currentPrice);
     const originalPrice = extractPrice(
       $('#priceblock_ourprice'),
       $('.a-price.a-text-price span.a-offscreen'),
@@ -69,15 +72,15 @@ export async function scrapeAmazonProduct(url: string) {
       priceHistory: [],
       discountRate: Number(discountRate),
       category: 'category',
-      reviewsCount:100,
-      stars: 4.5,
+      reviewsCount:1000,
+      stars: 5,
       isOutOfStock: outOfStock,
       description,
       lowestPrice: Number(currentPrice) || Number(originalPrice),
       highestPrice: Number(originalPrice) || Number(currentPrice),
       averagePrice: Number(currentPrice) || Number(originalPrice),
     }
-
+    console.log(data);
     return data;
   } catch (error: any) {
     console.log(error);
